@@ -15,10 +15,15 @@ We retrieved real hourly weather data (temperature, humidity, etc.) using a weat
 To simulate a real cold‑storage facility, we generated additional variables:
 
 | Variable  | Description | 
+
 | cooling_intensity | Random fluctuations between 0–1 to mimic compressor cycles | 
+
 | electricity_price | Synthetic price curve with daily peaks and noise | 
+
 | co2  | Random CO₂ levels representing respiration and ventilation | 
+
 | firmness | Gradual decline over time with random noise |
+
 | storage_days  | Counter representing how long the fruit has been stored | 
 
 These variables allow us to model spoilage even without a real industrial dataset.
@@ -31,6 +36,7 @@ spoilage_score= 0.4 x room_temperature + 0.3 x storage_days + 0.2 x co2 - 0.3 x 
 
 Then we applied a threshold:
 spoilage= 1 (if spoilage_score > 5)
+
 spoilage = 0 otherwise
 
 Why this formula?
