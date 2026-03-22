@@ -35,6 +35,7 @@ To label the dataset (spoilage vs. no spoilage), we created a linear spoilage ri
 spoilage_score= 0.4 x room_temperature + 0.3 x storage_days + 0.2 x co2 - 0.3 x cooling_intensity - 0.2 x firmness
 
 Then we applied a threshold:
+
 spoilage= 1 (if spoilage_score > 5)
 
 spoilage = 0 otherwise
