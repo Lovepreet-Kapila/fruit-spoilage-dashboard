@@ -27,9 +27,11 @@ These variables allow us to model spoilage even without a real industrial datase
 
 To label the dataset (spoilage vs. no spoilage), we created a linear spoilage risk function inspired by postharvest biology:
 
-\mathrm{spoilage\_ score}=0.4\cdot \mathrm{room\_ temperature}+0.3\cdot \mathrm{storage\_ days}+0.2\cdot \mathrm{co2}-0.3\cdot \mathrm{cooling\_ intensity}-0.2\cdot \mathrm{firmness}
+spoilage_score= 0.4 x room_temperature + 0.3 x storage_days + 0.2 x co2 - 0.3 x cooling_intensity - 0.2 x firmness
+
 Then we applied a threshold:
-\mathrm{spoilage}=\left\{ \, \begin{array}{ll}\textstyle 1&\textstyle \mathrm{if\  score}>5\\ \textstyle 0&\textstyle \mathrm{otherwise}\end{array}\right. 
+spoilage= 1 (if spoilage_score > 5)
+spoilage = 0 otherwise
 
 Why this formula?
 
@@ -89,15 +91,21 @@ A preview of the first rows is included.
 ## 5. Project Structure
 
 fruit-spoilage-dashboard/
+
 │
+
 ├── dashboard.py              # Streamlit app
+
 ├── spoilage_model.pkl        # Trained Random Forest model
+
 ├── scaler.pkl                # Scaler for preprocessing
+
 ├── dataset.csv               # Final dataset used in the dashboard
+
 ├── Spoilage_Model.ipynb      # Full notebook with data generation + training
+
 └── requirements.txt          # Dependencies for deployment
 
-
 
 # 6. Deployment
 The dashboard is deployed using Streamlit Cloud.
