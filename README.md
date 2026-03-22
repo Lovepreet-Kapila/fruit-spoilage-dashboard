@@ -2,6 +2,9 @@
 
 This project simulates a cold‑storage environment for fruits and predicts spoilage risk using a machine‑learning model. It combines synthetic data generation, real weather API data, a custom spoilage formula, and an interactive Streamlit dashboard. The goal is to demonstrate how data science can support bioeconomy, food storage optimization, and energy‑aware decision‑making.
 
+## Live Dashboard  
+Access the deployed app here: https://fruit-spoilage-dashboard-se92hjsdmsgqyafntgyv36.streamlit.app/
+
 ## 1. Data Generation Pipeline
 
 This project uses a hybrid dataset created from:
